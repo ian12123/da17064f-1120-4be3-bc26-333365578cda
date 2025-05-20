@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
@@ -85,79 +84,6 @@ const SkillsSection = () => {
   );
 };
 
-const ExperienceSection = () => {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start('visible');
-    }
-  }, [controls, isInView]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={{
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
-      }}
-      className="max-w-3xl mx-auto"
-    >
-      <h2 className="text-3xl font-bold mb-8">工作經驗</h2>
-      
-      <div className="relative border-l-2 border-gray-300 pl-8 ml-4">
-        {[
-          { 
-            year: '2022 - 至今', 
-            position: '高級3D模型設計師', 
-            company: '創意工作室', 
-            description: '負責專案的3D模型設計和製作，與團隊協作完成各類視覺專案。' 
-          },
-          { 
-            year: '2019 - 2022', 
-            position: '3D建模師', 
-            company: '遊戲開發公司', 
-            description: '參與多款知名遊戲的角色和場景模型設計，負責從概念到最終呈現的全流程工作。' 
-          },
-          { 
-            year: '2017 - 2019', 
-            position: '初級3D設計師', 
-            company: '廣告製作公司', 
-            description: '協助資深設計師完成各類商業3D模型和效果製作，學習行業專業技能和工作流程。' 
-          },
-        ].map((experience, index) => (
-          <motion.div 
-            key={index} 
-            className="mb-10 relative"
-            initial={{ opacity: 0, x: -20 }}
-            animate={controls}
-            variants={{
-              visible: { 
-                opacity: 1, 
-                x: 0, 
-                transition: { duration: 0.6, delay: 0.2 * index } 
-              }
-            }}
-          >
-            <div className="absolute -left-12 mt-1.5 h-4 w-4 rounded-full bg-blue-600" />
-            <h3 className="text-xl font-semibold mb-1">{experience.position}</h3>
-            <div className="flex items-center mb-2">
-              <span className="font-medium text-gray-600">{experience.company}</span>
-              <span className="mx-2 text-gray-400">|</span>
-              <span className="text-gray-500">{experience.year}</span>
-            </div>
-            <p className="text-gray-700">{experience.description}</p>
-          </motion.div>
-        ))}
-      </div>
-    </motion.div>
-  );
-};
-
 const Index = () => {
   return (
     <PageTransition>
@@ -189,10 +115,7 @@ const Index = () => {
           <SkillsSection />
         </section>
         
-        {/* Experience Section */}
-        <section className="py-20 bg-white">
-          <ExperienceSection />
-        </section>
+        {/* Experience Section has been removed */}
       </div>
     </PageTransition>
   );
