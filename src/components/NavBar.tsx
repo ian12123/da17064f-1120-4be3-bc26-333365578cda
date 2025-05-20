@@ -37,6 +37,14 @@ const NavBar = () => {
           >
             3D模型製作
           </Link>
+          <Link 
+            to="/logo-design" 
+            className={`text-white transition-all hover:text-primary-foreground ${
+              location.pathname === '/logo-design' ? 'border-b-2 border-white' : ''
+            }`}
+          >
+            LOGO設計
+          </Link>
         </div>
         
         {/* Mobile Menu Button */}
@@ -70,6 +78,13 @@ const NavBar = () => {
             onClick={toggleMenu}
           >
             3D模型製作
+          </Link>
+          <Link 
+            to="/logo-design" 
+            className="text-white text-2xl font-medium"
+            onClick={toggleMenu}
+          >
+            LOGO設計
           </Link>
         </div>
       </div>
