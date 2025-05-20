@@ -4,14 +4,14 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import ImageGallery from '@/components/ImageGallery';
 
-// 這裡我們使用了臨時的圖片，您需要使用自己的3D模型圖片替換這些URL
+// 使用上傳的3D模型圖片
 const modelItems = [
-  { id: 1, imageUrl: 'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: '角色模型 - 戰士' },
-  { id: 2, imageUrl: 'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: '場景設計 - 未來城市' },
-  { id: 3, imageUrl: 'https://images.unsplash.com/photo-1620656798932-902cbe7d06ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: '道具設計 - 科技設備' },
-  { id: 4, imageUrl: 'https://images.unsplash.com/photo-1618172193622-ae2d025f2c95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: '建築模型 - 古代寺廟' },
-  { id: 5, imageUrl: 'https://images.unsplash.com/photo-1619385808858-a825d84e0b58?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: '角色模型 - 魔法師' },
-  { id: 6, imageUrl: 'https://images.unsplash.com/photo-1620503374956-c942862f0372?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: '場景設計 - 森林' },
+  { id: 1, imageUrl: '/lovable-uploads/eee08aa5-cd23-4ebf-85af-14a69a4d629e.png', title: '概念刀劍模型' },
+  { id: 2, imageUrl: '/lovable-uploads/2a9d789c-5955-4691-a03a-aee86bf739d9.png', title: '手槍模型設計' },
+  { id: 3, imageUrl: '/lovable-uploads/b9a6d98b-d0ce-409f-9abb-fe5dc36cb8a4.png', title: '手槍側視圖' },
+  { id: 4, imageUrl: '/lovable-uploads/e5937bb1-a810-4fcf-aaed-06eb857ed265.png', title: '手槍細節特寫' },
+  { id: 5, imageUrl: '/lovable-uploads/fcc8f84e-076f-4971-bf2d-837bb70cd33a.png', title: '半自動步槍模型' },
+  { id: 6, imageUrl: '/lovable-uploads/29b45d7b-bc0f-4467-8291-4199b23d7ecc.png', title: '輕機槍模型' },
 ];
 
 const ModelsPage = () => {
@@ -37,10 +37,10 @@ const ModelsPage = () => {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="block">3D模型作品</span>
+              <span className="block">3D武器模型作品</span>
             </h1>
             <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-              探索我的3D設計作品，從角色到場景的視覺呈現
+              探索我的3D武器設計作品，從概念到實現的精細建模
             </p>
           </motion.div>
         </section>
@@ -59,7 +59,7 @@ const ModelsPage = () => {
           >
             <h2 className="text-3xl font-bold mb-8 text-center">作品展示</h2>
             <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto text-center">
-              以下是我近期完成的部分3D模型作品，每一個作品都代表了我對細節的追求和對設計的熱情。
+              以下是我近期完成的3D武器模型作品，每一個作品都代表了我對細節的追求和對設計的熱情。
               點擊每個作品可以查看更大圖片。
             </p>
             
@@ -82,17 +82,17 @@ const ModelsPage = () => {
                 { 
                   step: '01', 
                   title: '概念設計', 
-                  description: '從草圖和靈感收集開始，確定作品的風格和方向。' 
+                  description: '從草圖和功能需求開始，確定武器的外觀和機制。' 
                 },
                 { 
                   step: '02', 
                   title: '3D建模', 
-                  description: '使用專業軟體進行精確的3D建模，注重細節和比例。' 
+                  description: '使用專業建模軟體進行精確的3D建模，注重細節和比例。' 
                 },
                 { 
                   step: '03', 
                   title: '紋理與渲染', 
-                  description: '添加材質、紋理和燈光，呈現最終高品質的視覺效果。' 
+                  description: '添加材質、紋理和燈光，呈現逼真的視覺效果和金屬質感。' 
                 }
               ].map((process, index) => (
                 <motion.div 
