@@ -65,7 +65,7 @@ const LogoDesignPage = () => {
                 
                 <Card className="overflow-hidden mb-8">
                   <CardContent className="p-0">
-                    <div className="relative aspect-video">
+                    <div className="relative aspect-video bg-black">
                       <img 
                         src="/lovable-uploads/b28a6365-1790-4cce-b9c6-fc49ed8f1766.png" 
                         alt="LOGO設計草稿" 
@@ -108,7 +108,7 @@ const LogoDesignPage = () => {
                 
                 <Card className="overflow-hidden mb-8">
                   <CardContent className="p-0">
-                    <div className="relative aspect-video bg-gray-100">
+                    <div className="relative aspect-video bg-black">
                       <img 
                         src="/lovable-uploads/aefe1faf-86fe-437d-8e86-0b099e323f66.png" 
                         alt="LOGO最終設計" 
